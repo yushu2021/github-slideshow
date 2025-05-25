@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parkour Game - Tests</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #test-results {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            white-space: pre;
+        }
+        .pass { color: green; }
+        .fail { color: red; }
+        /* Hide actual game for tests unless needed for specific visual debugging */
+        /* #game-container { display: none; } */
+    </style>
+</head>
+<body>
+    <h1>Parkour Game - Unit Tests</h1>
+
+    <!-- Game container for script.js to find its elements -->
+    <!-- It might be better to create these dynamically in test.js before each test -->
+    <div id="game-container">
+        <div id="score-display">Score: 0</div>
+        <div id="player"></div>
+        <div id="obstacle"></div>
+    </div>
+
+    <div id="test-results"></div>
+
+    <!-- Game script - must be loaded before tests that might depend on its initialized state -->
+    <!-- However, for true unit tests, we might want to load it AFTER setting up mocks or test conditions -->
+    <!-- For simplicity now, load it here. Tests will need to handle re-initialization or state setup. -->
+    <script src="script.js"></script>
+    <!-- Test script -->
+    <script src="test.js"></script>
+</body>
+</html>
